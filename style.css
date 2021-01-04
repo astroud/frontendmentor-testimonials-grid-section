@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  background: var(--light-grayish-blue);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 71px;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.card {
+  max-width: 327px;
+  margin: 0 24px 24px 24px;
+  padding: 26px 32px;
+  background: var(--white);
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  border-radius: 8px;
+}
+
+.card__endorser {
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-template-rows: 16px;
+  column-gap: 17px;
+  row-gap: 2px;
+}
+
+.endorser__headshot {
+  width: 28px;
+  height: 28px;
+  border-radius: 90%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.endorser__name {
+  font-size: 13px;
+}
+
+.endorser__status {
+  font-size: 11px;
+  opacity: 0.5;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.card__callout {
+  margin: 18px 0 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.card__quote {
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.7;
+}
+
+.card__purple > .card__callout {
+  margin-bottom: 40px;
+}
+
+.card__purple {
+  background: url("data:image/svg+xml,%3Csvg width='104' height='102' viewBox='0 0 104 102' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M42 59.7268V102H0V75.7394C0 59.9403 1.48485 47.9042 4.45455 39.6311C7.42424 31.3579 12.0114 23.752 18.2159 16.8132C24.4205 9.87441 32.3485 4.27002 42 0V19.3752C36.9091 22.2575 33.0114 25.8603 30.3068 30.1837C27.6023 34.5071 25.5606 39.044 24.1818 43.7943C22.803 48.5447 22.1136 53.8556 22.1136 59.7268H42ZM104 59.7268V102H62V75.7394C62 59.9403 63.4848 47.9042 66.4545 39.6311C69.4242 31.3579 73.9848 23.752 80.1364 16.8132C86.2879 9.87441 94.2424 4.27002 104 0V19.3752C98.9091 22.2575 95.0114 25.8603 92.3068 30.1837C89.6023 34.5071 87.5606 39.044 86.1818 43.7943C84.803 48.5447 84.1136 53.8556 84.1136 59.7268H104Z' fill='%23A775F1'/%3E%3C/svg%3E%0A") no-repeat right 24px top var(--moderate-violet);
+  color: var(--white);
+}
+
+.card__gray {
+  background: var(--very-dark-grayish-blue);
+  color: var(--white);
+}
+
+.card__white {
+  background: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.card__black {
+  background: var(--very-dark-blackish-blue);
+  color: var(--light-grayish-blue);
+}
+
+.card__purple > .card__endorser > .endorser__headshot {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #A775F1;
+}
+
+.card__black > .card__endorser > .endorser__headshot {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--moderate-violet);
+}
