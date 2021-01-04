@@ -119,6 +119,7 @@ body {
     grid-template-columns: 255px 255px;
     grid-template-rows: 282px;
     gap: 30px;
+    margin-top: clamp(71px, 18.22vh, 164px);
   }
 
   .card {
